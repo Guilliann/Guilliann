@@ -1,0 +1,109 @@
+/* Variables pour le mode clair et sombre */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --card-background: #fff;
+    --card-border: #ddd;
+    --transition-speed: 0.3s; /* Ajout de la variable de transition */
+}
+
+.dark-mode {
+    --background-color: #333;
+    --text-color: #f4f4f4;
+    --primary-color: #61dafb;
+    --secondary-color: #ccc;
+    --card-background: #444;
+    --card-border: #666;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed); /* Ajout de la transition */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    transition: background-color var(--transition-speed);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed); /* Ajout de la transition */
+}
+.card img{
+    max-width: 100%;
+    height:auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+     transition: color var(--transition-speed); /* Ajout de la transition */
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    transition: background-color var(--transition-speed);
+}
+
+#darkModeToggle{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
